@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thayna & Silas – Nosso Casamento</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --perola:#fbf6f1;
+    --rosa:#e9c9c4;
+    --rosa-escuro:#b9757a;
+    --vinho:#5b2b35;
+    --dourado:#b8924f;
+    --texto:#4a3338;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Cormorant Garamond',Georgia,serif;
+    color:var(--texto);
+    background:
+      radial-gradient(circle at 15% 10%, rgba(233,201,196,.55), transparent 45%),
+      radial-gradient(circle at 85% 90%, rgba(233,201,196,.45), transparent 45%),
+      var(--perola);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:56px 20px 40px;
+    line-height:1.7;
+    font-size:1.2rem;
+  }
+  .versiculo{
+    font-style:italic;
+    color:var(--rosa-escuro);
+    text-align:center;
+    max-width:520px;
+    margin-bottom:28px;
+  }
+  .versiculo small{display:block;margin-top:4px;color:var(--dourado);font-style:normal;letter-spacing:.08em}
+  h1{
+    font-family:'Pinyon Script',cursive;
+    font-weight:400;
+    font-size:clamp(3.4rem,13vw,7rem);
+    line-height:1.05;
+    color:var(--vinho);
+    text-align:center;
+  }
+  h1 .e{
+    display:block;
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-size:.32em;
+    color:var(--dourado);
+    margin:2px 0;
+  }
+  .data{
+    margin:18px 0 38px;
+    color:var(--dourado);
+    letter-spacing:.2em;
+    font-size:1rem;
+    text-align:center;
+  }
+  .ornamento{
+    width:min(260px,60%);
+    height:1px;
+    background:linear-gradient(90deg,transparent,var(--dourado),transparent);
+    margin:0 auto 38px;
+    position:relative;
+  }
+  .ornamento::after{
+    content:"♥";
+    position:absolute;
+    left:50%;top:50%;
+    transform:translate(-50%,-52%);
+    background:var(--perola);
+    padding:0 12px;
+    color:var(--rosa-escuro);
+    font-size:1rem;
+  }
+
+  /* Moldura do vídeo */
+  .moldura{
+    width:min(900px,100%);
+    padding:14px;
+    background:#fff;
+    border:1px solid var(--rosa);
+    border-radius:6px;
+    box-shadow:0 24px 60px -20px rgba(91,43,53,.35);
+    position:relative;
+  }
+  .moldura::before{
+    content:"";
+    position:absolute;
+    inset:6px;
+    border:1px solid var(--dourado);
+    border-radius:3px;
+    pointer-events:none;
+    opacity:.6;
+  }
+  .video{
+    position:relative;
+    width:100%;
+    aspect-ratio:16/9;
+    background:var(--vinho);
+    overflow:hidden;
+  }
+  .video iframe{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    border:0;
+  }
+
+  .mensagem{
+    max-width:600px;
+    text-align:center;
+    margin:48px 0 0;
+  }
+  .mensagem p + p{margin-top:14px}
+  .assinatura{
+    font-family:'Pinyon Script',cursive;
+    font-size:2.4rem;
+    color:var(--rosa-escuro);
+    margin-top:22px;
+    text-align:center;
+  }
+  footer{
+    margin-top:48px;
+    font-size:.95rem;
+    color:var(--dourado);
+    text-align:center;
+    letter-spacing:.06em;
+  }
+  @media (max-width:520px){
+    body{padding-top:40px;font-size:1.1rem}
+    .moldura{padding:8px}
+    .moldura::before{inset:3px}
+  }
+  @media (prefers-reduced-motion:no-preference){
+    h1{animation:surgir 1.6s ease both}
+    @keyframes surgir{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  }
+</style>
+</head>
+<body>
+
+  <p class="versiculo">
+    “O amor tudo suporta, tudo crê, tudo espera.”
+    <small>1 Coríntios 13:7</small>
+  </p>
+
+  <h1>Thayna <span class="e">&</span> Silas</h1>
+  <p class="data">NOSSO CASAMENTO · 24/10/2026</p>
+  <div class="ornamento"></div>
+
+  <!-- ============ VÍDEO DO YOUTUBE ============
+       Troque APENAS o código "SEU_ID_DO_VIDEO" pelo ID do seu vídeo.
+       Exemplo: se o link é https://www.youtube.com/watch?v=AbC123xyz09
+       o ID é AbC123xyz09 → .../embed/AbC123xyz09
+       Ou use: YouTube > Compartilhar > Incorporar > copie o <iframe>
+  =============================================== -->
+  <div class="moldura">
+    <div class="video">
+      <iframe
+        src="https://www.youtube.com/embed/CKgbbnXmjws?rel=0"
+        title="Vídeo do casamento de Thayna e Silas"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+        loading="lazy"></iframe>
+    </div>
+  </div>
+
+  <section class="mensagem">
+    <p>Deus nos escolheu um para o outro muito antes de nos conhecermos. Neste dia, diante dele e de quem amamos, selamos uma promessa que vai durar para sempre.</p>
+    <p>Foi uma honra fazer parte da história de vocês. Que cada momento aqui guardado lembre que o amor é, antes de tudo, presente do Senhor.</p>
+    <p class="assinatura">Thayna & Silas</p>
+  </section>
+
+  <footer>Com amor e gratidão a Deus ♥ Next Ascend</footer>
+
+</body>
+</html>
